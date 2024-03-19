@@ -789,6 +789,7 @@ def reduced_vocabulary(
                     token_bytes = cast(
                         List[int], [gpt2_unicode_to_bytes().get(c) for c in token_str]
                     )
+                    breakpoint()
                     if None in token_bytes:
                         raise RuntimeError(
                             f"Cannot convert token `{token}` ({token_idx}) to bytes: {token_str}"
